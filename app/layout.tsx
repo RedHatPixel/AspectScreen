@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const oswald = Oswald({
+  variable: "--oswald",
   subsets: ["latin"],
-  weight: "100"
+  weight: ["400"]
 });
 
 export const metadata: Metadata = {
@@ -17,8 +17,10 @@ export default function RootLayout({ children }: Readonly <{ children: React.Rea
   return (
     <html
       lang="en"
-      className={`${poppins.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      className={`${oswald.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
