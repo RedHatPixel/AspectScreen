@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from "react";
 import Image from "next/image";
 import { images } from "@/constants/images";
 import SearchBar from "@/components/SearchBar";
@@ -35,7 +36,9 @@ const Home = () => {
           </p>
 
           <div className="w-full max-w-2xl flex gap-2 items-center justify-center">
-            <SearchBar className="w-full" />
+            <Suspense fallback={<div className="w-full h-10 rounded bg-white/10 animate-pulse" />}>  {/* wrap SearchBar */}
+              <SearchBar className="w-full" />
+            </Suspense>
             <Link href="/" className="w-32 rounded bg-background px-4 py-2 text-sm font-medium text-white hover:bg-background/80">
               Get Started
             </Link>
