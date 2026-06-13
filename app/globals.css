@@ -3,8 +3,8 @@
 :root {
   --primary: #8F00FF;
   --secondary: #A533FF;
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0e0e0e;
+    --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,17 +12,6 @@
   --color-secondary: var(--secondary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #8F00FF;
-    --secondary: #A533FF;
-    --background: #0e0e0e;
-    --foreground: #ededed;
-  }
 }
 
 @layer utilities {
